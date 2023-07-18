@@ -1,0 +1,10 @@
+13:24:09 **** Incremental Build of configuration Debug for project tunetest ****
+make -j8 all 
+arm-none-eabi-size   tunetest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21756	    472	   1584	  23812	   5d04	tunetest.elf
+Finished building: default.size.stdout
+ 
+
+13:24:10 Build Finished. 0 errors, 0 warnings. (took 842ms)
+

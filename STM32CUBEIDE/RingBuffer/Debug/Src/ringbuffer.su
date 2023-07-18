@@ -1,0 +1,4 @@
+ringbuffer.c:12:6:put	16	static
+ringbuffer.c:25:6:get	24	static
+ringbuffer.c:42:5:hasSpace	16	static
+ringbuffer.c:50:5:hasElement	16	static

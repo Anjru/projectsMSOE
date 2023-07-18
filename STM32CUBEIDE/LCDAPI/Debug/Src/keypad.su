@@ -1,0 +1,7 @@
+keypad.c:63:6:keypad_init	16	static
+keypad.c:92:5:keypad_getkey	16	static
+keypad.c:111:5:keypad_getkey_noblock	8	static
+keypad.c:122:5:keypad_getchar	8	static
+keypad.c:135:12:scan	24	static
+keypad.c:167:12:process_row	24	static
+keypad.c:191:12:scan_columns	24	static

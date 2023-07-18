@@ -1,0 +1,10 @@
+22:36:28 **** Incremental Build of configuration Debug for project hello2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\hello2.o" "..\\src\\hello2.c" 
+..\src\hello2.c:11:10: fatal error: stdio.h: No such file or directory
+ #include <stdio.h>
+          ^~~~~~~~~
+compilation terminated.
+
+22:36:28 Build Failed. 1 errors, 0 warnings. (took 176ms)
+

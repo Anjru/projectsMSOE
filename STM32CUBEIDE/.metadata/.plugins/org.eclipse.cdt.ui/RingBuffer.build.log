@@ -1,0 +1,65 @@
+09:39:25 **** Incremental Build of configuration Debug for project RingBuffer ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32 -DSTM32F4 -DSTM32F446RETx -DDEBUG -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:26:17: warning: implicit declaration of function 'strtok'; did you mean 'strtoumax'? [-Wimplicit-function-declaration]
+   char* input = strtok(user_input, "\n");
+                 ^~~~~~
+                 strtoumax
+../Src/main.c:26:17: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+../Src/main.c:30:17: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   char* token = strtok(input, " ");
+                 ^~~~~~
+../Src/main.c:35:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, " ");
+         ^
+../Src/main.c:38:40: warning: implicit declaration of function 'strtoll'; did you mean 'strtoumax'? [-Wimplicit-function-declaration]
+   uint32_t address_convert = (uint32_t)strtoll(address, NULL, 16);
+                                        ^~~~~~~
+                                        strtoumax
+../Src/main.c:43:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, " ");
+         ^
+../Src/main.c:48:28: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+   uint32_t *address_data = (uint32_t) address_convert;
+                            ^
+../Src/main.c:51:17: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("Hex:%X, Dec:%d \n\r", *address_data, *address_data);
+                ~^                ~~~~~~~~~~~~~
+                %lX
+../Src/main.c:51:25: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+    printf("Hex:%X, Dec:%d \n\r", *address_data, *address_data);
+                        ~^                       ~~~~~~~~~~~~~
+                        %ld
+../Src/main.c:61:13: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+    printf("%X: ", address_data);
+            ~^
+            %ln
+../Src/main.c:66:13: warning: unknown escape sequence: '\X'
+      printf("\n\r%\X: ", address_data);
+             ^~~~~~~~~~~
+../Src/main.c:66:19: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+      printf("\n\r%\X: ", address_data);
+                  ~^~
+                  %ln
+../Src/main.c:69:16: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+     printf("%08X ", *address_data);
+             ~~~^    ~~~~~~~~~~~~~
+             %08lX
+arm-none-eabi-gcc -o "RingBuffer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\yanga\STM32CubeIDE\workspace_1.1.0\RingBuffer\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RingBuffer.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RingBuffer.elf
+ 
+arm-none-eabi-objdump -h -S  RingBuffer.elf  > "RingBuffer.list"
+arm-none-eabi-objcopy  -O binary  RingBuffer.elf  "RingBuffer.bin"
+arm-none-eabi-size   RingBuffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26336	    472	   1704	  28512	   6f60	RingBuffer.elf
+Finished building: RingBuffer.list
+Finished building: RingBuffer.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+
+09:39:28 Build Finished. 0 errors, 13 warnings. (took 2s.609ms)
+

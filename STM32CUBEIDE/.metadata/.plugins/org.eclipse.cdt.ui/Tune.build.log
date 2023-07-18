@@ -1,0 +1,10 @@
+09:33:00 **** Incremental Build of configuration Debug for project Tune ****
+make -j8 all 
+arm-none-eabi-size   Tune.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18520	    472	   1584	  20576	   5060	Tune.elf
+Finished building: default.size.stdout
+ 
+
+09:33:02 Build Finished. 0 errors, 0 warnings. (took 1s.278ms)
+

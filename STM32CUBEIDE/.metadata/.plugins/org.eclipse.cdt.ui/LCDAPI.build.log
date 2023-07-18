@@ -1,0 +1,10 @@
+09:40:57 **** Incremental Build of configuration Debug for project LCDAPI ****
+make -j8 all 
+arm-none-eabi-size   LCDAPI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21280	    472	   1584	  23336	   5b28	LCDAPI.elf
+Finished building: default.size.stdout
+ 
+
+09:40:59 Build Finished. 0 errors, 0 warnings. (took 1s.815ms)
+
